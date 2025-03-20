@@ -29,4 +29,4 @@ ENV DB_USERNAME=${DB_USERNAME}
 ENV DB_PASSWORD=${DB_PASSWORD}
 
 # Run the application
-CMD ["java", "-jar", "app.jar"]
+# CMD ["java", "-jar", "app.jar"]
