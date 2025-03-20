@@ -20,13 +20,9 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Pass system environment variables to container environment variables
-
 ENV DATABASE_URL=${DATABASE_URL}
 ENV DB_USERNAME=${DB_USERNAME}
 ENV DB_PASSWORD=${DB_PASSWORD}
 
 # Run the application
-RUN echo "DATABASE_URL=$DATABASE_URL" && \
-    echo "DB_USERNAME=$DB_USERNAME" && \
-    echo "DB_PASSWORD=$DB_PASSWORD"
 CMD ["java", "-jar", "app.jar"]
