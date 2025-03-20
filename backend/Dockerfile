@@ -19,5 +19,9 @@ WORKDIR /app
 # Copy built JAR from build stage
 COPY --from=build /app/target/*.jar app.jar
 
+ENV DATABASE_URL=jdbc:postgresql://nozomi.proxy.rlwy.net:18285/railway
+ENV DB_USERNAME=postgres
+ENV DB_PASSWORD=hbWuyHZsPmhcSJxQQkkDhxgmllQNQaiP
+
 # Run the application
 CMD ["java", "-jar", "app.jar"]
