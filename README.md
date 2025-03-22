@@ -85,10 +85,11 @@ mvn clean verify sonar:sonar \
 Powershell:
 ```powershell
 mvn clean verify sonar:sonar `
-  "-Dsonar.host.url=$($env:SONAR_URL)" `
-  "-Dsonar.organization=$($env:SONAR_ORGANIZATION)" `
-  "-Dsonar.projectKey=$($env:SONAR_PROJECT_KEY)" `
-  "-Dsonar.token=$($env:SONAR_TOKEN)"
+  "-Dsonar.host.url=$($SONAR_URL)" `
+  "-Dsonar.organization=$($SONAR_ORGANIZATION)" `
+  "-Dsonar.projectKey=$($SONAR_PROJECT_KEY)" `
+  "-Dsonar.token=$($SONAR_TOKEN)"`
+  "-Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml"
 ```
 
 ### Frontend
