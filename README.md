@@ -73,6 +73,24 @@ cd backend
 mvn test
 ```
 
+#### Run SonarQube locally
+Set the environment variables and run the command:
+```bash
+mvn clean verify sonar:sonar \
+            -Dsonar.host.url=$SONAR_URL \
+            -Dsonar.organization=$SONAR_ORGANIZATION \
+            -Dsonar.projectKey=$SONAR_PROJECT_KEY \
+            -Dsonar.token=$SONAR_TOKEN
+```
+Powershell:
+```powershell
+mvn clean verify sonar:sonar `
+  "-Dsonar.host.url=$($env:SONAR_URL)" `
+  "-Dsonar.organization=$($env:SONAR_ORGANIZATION)" `
+  "-Dsonar.projectKey=$($env:SONAR_PROJECT_KEY)" `
+  "-Dsonar.token=$($env:SONAR_TOKEN)"
+```
+
 ### Frontend
 
 #### Run Frontend in Production mode
