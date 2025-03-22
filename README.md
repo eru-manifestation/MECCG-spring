@@ -75,7 +75,14 @@ mvn test
 
 ### Frontend
 
-#### Run Frontend
+#### Run Frontend in Production mode
+To start the frontend application, navigate to the `frontend` directory and execute:
+```bash
+cd frontend
+npm run build
+```
+
+#### Run Frontend in Development mode
 To start the frontend application, navigate to the `frontend` directory and execute:
 ```bash
 cd frontend
